@@ -81,8 +81,7 @@ public class ProjetoPI_4 {
 		System.out.println("Escolha uma das opções acima, " + name);
 	}
 
-	public static void verify(int questIndex, String quest[], String explanation[], String indiceResposta,
-			String answer[]) {
+	public static void verify(int questIndex, String quest[], String explanation[], String indiceResposta,String answer[]) {
 		if (indiceResposta.equalsIgnoreCase(answer[questIndex])) {
 			System.out.println("Resposta Certa");
 			ProjetoPI_4.right();
@@ -96,11 +95,9 @@ public class ProjetoPI_4 {
 	}
 
 	public static void right() {
-		if (ProjetoPI_4.points <= 9) {
-			ProjetoPI_4.points += 1;
-			System.out.println("Você está com : " + ProjetoPI_4.points + " Pontos.");
-			ProjetoPI_4.gameover();
-		}
+		ProjetoPI_4.points += 1;
+		System.out.println("Você está com : " + ProjetoPI_4.points + " Pontos.");
+		ProjetoPI_4.gameover();
 	}
 
 	public static void wrong() {
@@ -275,7 +272,7 @@ public class ProjetoPI_4 {
 				"Essa será uma aventura perigosa e eu vou acompanha-lo, mas antes de começar vou fazer algumas perguntas...\n");
 		System.out.println("Qual o seu nome jogador?");
 		String name = sc.next();
-		System.out.println(name + "? Ok, não é lá essas coisas né?! mas paciência, cada um tem o nome que merece.\n");
+		System.out.println("\n" + name + "? Ok, não é lá essas coisas né?! mas paciência, cada um tem o nome que merece.\n");
 		System.out.println("E de qualquer forma, prazer em te conhecer " + name + "!");
 		System.out.println("O meu nome Ribeirin, e sim, eu sei que meu nome é muito bom.\n");
 		System.out.println(
@@ -285,12 +282,12 @@ public class ProjetoPI_4 {
 		System.out.println(
 				"Mas caso nem com minha ajuda você não consiga passar pelos desafios ficara preso aqui com a entidade como eu fiquei.\n");
 		System.out.println("A cada resposta que você não souber e errar, te ajudarei com o feedback da questão.");
-		System.out.println("Bom, chega de blá-blá-blá, vamos começar, " + name + "?");
+		System.out.println("Bom, chega de blá-blá-blá, vamos começar, " + name + "?\n");
 		String querComecar = sc.next();
 
 		if (querComecar.equalsIgnoreCase("Sim") || querComecar.equalsIgnoreCase("Vamos")
 				|| querComecar.equalsIgnoreCase("Claro") || querComecar.equalsIgnoreCase("Bora")) {
-			System.out.println("Otimo, vamos começar " + name);
+			System.out.println("Otimo, vamos começar " + name + "\n");
 
 			int digitacao;
 			String digitacaoresposta = "";
